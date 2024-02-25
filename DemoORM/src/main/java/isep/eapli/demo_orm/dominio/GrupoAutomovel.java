@@ -1,13 +1,25 @@
 package isep.eapli.demo_orm.dominio;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class GrupoAutomovel {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String nome;
 
     private int portas;
 
     private String classe;
 
+
+    public GrupoAutomovel(){}
     public GrupoAutomovel(String nome, int portas, String classe){
         this.nome=nome;
         this.portas=portas;
