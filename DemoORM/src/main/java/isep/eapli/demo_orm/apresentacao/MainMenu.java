@@ -5,7 +5,11 @@
  */
 package isep.eapli.demo_orm.apresentacao;
 
+import isep.eapli.demo_orm.aplicacao.GrupoAutomovelController;
+import isep.eapli.demo_orm.dominio.GrupoAutomovel;
 import isep.eapli.demo_orm.util.Console;
+
+import java.util.List;
 
 /**
  *
@@ -16,17 +20,27 @@ public class MainMenu {
 		int opcao = 0;
 		do {
 			opcao = menu();
-
+			GrupoAutomovelController grupoAutomovelController = new GrupoAutomovelController();
 			switch (opcao) {
 				case 0:
 					System.out.println("fim ...");
 					break;
 				case 1:
-					System.out.println("Ainda não implementado ...");
+					String nome = Console.readLine("Nome");
+					int portas = Console.readInteger("Portas");
+					String classe = Console.readLine("Classe");
+					grupoAutomovelController = new GrupoAutomovelController();
+					grupoAutomovelController.registarGrupoAutomóvel(nome,portas,classe);
 					break;
 
 				case 2:
-					System.out.println("Ainda não implementado ...");
+					grupoAutomovelController = new GrupoAutomovelController();
+					List<GrupoAutomovel> result= grupoAutomovelController.listarGruposAutomoveis();
+					for (GrupoAutomovel ga:result){
+						System.out.println("Nome:"+ga.getNome());
+						System.out.println("Portas:"+ga.getPortas());
+						System.out.println("Classe"+ga.getClasse());
+					}
 					break;
 
 				
