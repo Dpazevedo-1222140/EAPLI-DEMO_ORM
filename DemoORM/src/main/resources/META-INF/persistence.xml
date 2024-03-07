@@ -8,6 +8,7 @@
     <!-- Test-->
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <class>isep.eapli.demo_orm.dominio.GrupoAutomovel</class>
+    <class>isep.eapli.demo_orm.dominio.Automovel</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
       <property name="javax.persistence.jdbc.url"
