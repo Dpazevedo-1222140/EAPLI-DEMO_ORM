@@ -18,12 +18,15 @@ public class GrupoAutomovel {
 
     private String classe;
 
+    private Double precoDia;
+
 
     public GrupoAutomovel(){}
-    public GrupoAutomovel(String nome, int portas, String classe){
+    public GrupoAutomovel(String nome, int portas, String classe,Double precoDia){
         this.nome=nome;
         this.portas=portas;
         this.classe=classe;
+        this.precoDia = precoDia;
     }
 
     public void setNome(String nome) {

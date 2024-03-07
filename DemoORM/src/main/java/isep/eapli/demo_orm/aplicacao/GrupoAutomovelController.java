@@ -8,6 +8,8 @@ package isep.eapli.demo_orm.aplicacao;
 import isep.eapli.demo_orm.dominio.GrupoAutomovel;
 import isep.eapli.demo_orm.persistencia.GrupoAutomovelRepositorio;
 import isep.eapli.demo_orm.persistencia.GrupoAutomovelRepositorioJPAImpl;
+import isep.eapli.demo_orm.persistencia.GrupoAutomovelRepositorioJPARepository;
+
 import java.util.List;
 
 /**
@@ -16,15 +18,16 @@ import java.util.List;
  */
 public class GrupoAutomovelController {
 
+    private static final GrupoAutomovelRepositorioJPARepository repo = new GrupoAutomovelRepositorioJPARepository();
+
+
     public GrupoAutomovel registarGrupoAutomóvel(String nome, int portas,
-            String classe) {
-        GrupoAutomovel grupo1 = new GrupoAutomovel(nome, portas, classe);
-        GrupoAutomovelRepositorio repo = new GrupoAutomovelRepositorioJPAImpl();
+            String classe,Double precoPorDia) {
+        GrupoAutomovel grupo1 = new GrupoAutomovel(nome, portas, classe,precoPorDia);
         return repo.add(grupo1);
     }
     
     public List<GrupoAutomovel> listarGruposAutomoveis() {
-        GrupoAutomovelRepositorio repo = new GrupoAutomovelRepositorioJPAImpl();
         return repo.findAll();
 	}
 

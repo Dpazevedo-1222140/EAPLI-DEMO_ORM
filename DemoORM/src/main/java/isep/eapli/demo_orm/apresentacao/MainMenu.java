@@ -18,27 +18,20 @@ import java.util.List;
 public class MainMenu {
     public static void mainLoop() {
 		int opcao = 0;
+		GrupoAutomovelController grupoAutomovelController = new GrupoAutomovelController();
+		GrupoAutomovelUI ui= new GrupoAutomovelUI();
 		do {
 			opcao = menu();
-			GrupoAutomovelController grupoAutomovelController = new GrupoAutomovelController();
 			switch (opcao) {
 				case 0:
 					System.out.println("fim ...");
 					break;
 				case 1:
-					String nome = Console.readLine("Nome");
-					int portas = Console.readInteger("Portas");
-					String classe = Console.readLine("Classe");
-					grupoAutomovelController.registarGrupoAutomóvel(nome,portas,classe);
+					ui.registarGA();
 					break;
 
 				case 2:
-					List<GrupoAutomovel> result= grupoAutomovelController.listarGruposAutomoveis();
-					for (GrupoAutomovel ga:result){
-						System.out.println("Nome:"+ga.getNome());
-						System.out.println("Portas:"+ga.getPortas());
-						System.out.println("Classe"+ga.getClasse());
-					}
+					ui.listarGAs();
 					break;
 
 				

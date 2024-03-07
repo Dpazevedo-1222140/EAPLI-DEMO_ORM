@@ -23,12 +23,18 @@ public class GrupoAutomovelUI {
         String nome = Console.readLine("Nome:");
         int portas = Console.readInteger("Número de portas");
         String classe = Console.readLine("Classe:");
+        Double precoDia = Console.readDouble("Preço Dia");
         GrupoAutomovel grupoAutomovel = controller.
-                registarGrupoAutomóvel(nome, portas, classe);
+                registarGrupoAutomóvel(nome, portas, classe,precoDia);
         System.out.println("Grupo Automóvel" + grupoAutomovel);
     }
     public void listarGAs() {
-		throw new UnsupportedOperationException("Ainda não implementada.");
+        List<GrupoAutomovel> result= controller.listarGruposAutomoveis();
+        for (GrupoAutomovel ga:result){
+            System.out.println("Nome:"+ga.getNome());
+            System.out.println("Portas:"+ga.getPortas());
+            System.out.println("Classe"+ga.getClasse());
+        }
 	}
 
 	public void procurarGAPorID(long id) {
