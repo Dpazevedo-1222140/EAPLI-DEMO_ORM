@@ -15,11 +15,11 @@
             <version>1.4.194</version>
         </dependency>
         <!-- From IntelliJ tutorial: https://www.jetbrains.com/help/idea/jakarta-persistence-jpa.html#share-facet-settings -->
-        <dependency>
+        <!--<dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
             <version>3.1.0</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>javax.persistence</groupId>
