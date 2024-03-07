@@ -29,12 +29,10 @@ public class MainMenu {
 					String nome = Console.readLine("Nome");
 					int portas = Console.readInteger("Portas");
 					String classe = Console.readLine("Classe");
-					grupoAutomovelController = new GrupoAutomovelController();
 					grupoAutomovelController.registarGrupoAutomóvel(nome,portas,classe);
 					break;
 
 				case 2:
-					grupoAutomovelController = new GrupoAutomovelController();
 					List<GrupoAutomovel> result= grupoAutomovelController.listarGruposAutomoveis();
 					for (GrupoAutomovel ga:result){
 						System.out.println("Nome:"+ga.getNome());
