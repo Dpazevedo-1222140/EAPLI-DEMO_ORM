@@ -25,3 +25,6 @@ replay_pid*
 
 #intellij config
 .idea
+
+#DB File
+*.db
