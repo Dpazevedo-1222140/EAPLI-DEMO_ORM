@@ -5,11 +5,7 @@
  */
 package isep.eapli.demo_orm.apresentacao;
 
-import isep.eapli.demo_orm.aplicacao.GrupoAutomovelController;
-import isep.eapli.demo_orm.dominio.GrupoAutomovel;
 import isep.eapli.demo_orm.util.Console;
-
-import java.util.List;
 
 /**
  *
@@ -18,20 +14,19 @@ import java.util.List;
 public class MainMenu {
     public static void mainLoop() {
 		int opcao = 0;
-		GrupoAutomovelController grupoAutomovelController = new GrupoAutomovelController();
-		GrupoAutomovelUI ui= new GrupoAutomovelUI();
 		do {
 			opcao = menu();
+
 			switch (opcao) {
 				case 0:
 					System.out.println("fim ...");
 					break;
 				case 1:
-					ui.registarGA();
+					System.out.println("Ainda não implementado ...");
 					break;
 
 				case 2:
-					ui.listarGAs();
+					System.out.println("Ainda não implementado ...");
 					break;
 
 				

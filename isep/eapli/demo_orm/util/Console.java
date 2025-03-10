@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package isep.eapli.demo_orm.util.util;
+package isep.eapli.demo_orm.util;
 
-import isep.eapli.demo_orm.util.DateTime;
-
+import isep.eapli.demo_orm.util.util.DateTime;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
